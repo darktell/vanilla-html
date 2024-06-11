@@ -467,6 +467,9 @@ p {
   border-radius: 0.5rem;
   cursor: pointer;
 }
+.video__button:hover {
+  background-color: #4BCAFF;
+}
 .video__title {
   font-size: 48px;
   padding: 0 16px;
@@ -568,6 +571,7 @@ p {
   width: 100%;
   border: 1px solid transparent;
   outline: none;
+  font-size: 100%;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 0.75rem;
@@ -580,11 +584,14 @@ p {
   border-color: #838383;
 }
 .contact__form__textarea {
+  font-size: 16px;
   text-align: center;
   max-height: 200px;
   min-height: 100px;
   border-radius: 0.375rem;
   width: 100%;
+  max-width: 100%;
+  min-width: 100%;
   outline: none;
   border: 1px solid transparent;
   transition-property: border-color;
@@ -594,7 +601,14 @@ p {
 .contact__form__textarea:hover {
   border-color: #838383;
 }
-.contact__form button {
+.contact__form__form-button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  margin: 0;
+  font: inherit;
+  outline: none;
   cursor: pointer;
   color: #4BCAFF;
   background-color: #414042;
@@ -605,6 +619,10 @@ p {
   padding-right: 1.5rem;
   border-radius: 0.375rem;
   transition-duration: 150ms;
+  font-weight: 500;
+}
+.contact__form__form-button:hover {
+  opacity: 90%;
 }
 .contact__iframe {
   height: 300px;

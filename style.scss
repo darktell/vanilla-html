@@ -111,6 +111,7 @@ p {
   color: white;
   background-image: url("img/video-bg-image.png");
 
+
   &__button {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -119,6 +120,10 @@ p {
     border: 1px solid white;
     border-radius: 0.5rem;
     cursor: pointer;
+  }
+
+  &__button:hover{
+    background-color: $primary;
   }
 
   &__title {
@@ -178,6 +183,7 @@ p {
 
 @import "contact";
 
+
 .footer {
   background-color: $darkGray;
   width: $full;
@@ -196,7 +202,6 @@ p {
       justify-content: space-between;
       gap: 0;
     }
-
     color: $lightGray;
   }
 }

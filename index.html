@@ -426,12 +426,12 @@
 
                 <p class="contact__form__form-label">Contact</p>
 
-                <input type="text" class="contact__form__form-input" id="form-name" name="name" placeholder="Your name"
+                <input type="text" aria-label="contact input field" class="contact__form__form-input" id="form-name" name="name" placeholder="* Your name"
                        required>
-                <input type="email" class="contact__form__form-input" name="email" placeholder="Your email" required>
-                <input type="text" class="contact__form__form-input" name="subject" required placeholder="Subject">
-                <textarea name="message" class="contact__form__textarea" required placeholder="Message"></textarea>
-                <button type="submit">Submit</button>
+                <input type="email" aria-label="contact email field"  class="contact__form__form-input" name="email" placeholder="* Your email" required>
+                <input type="text" aria-label="contact subject field"  class="contact__form__form-input" name="subject *" required placeholder="* Subject">
+                <textarea name="message" aria-label="contact message field"  class="contact__form__textarea" required placeholder="* Message"></textarea>
+                <button  class="contact__form__form-button" type="submit">Send</button>
             </div>
         </form>
 
