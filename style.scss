@@ -1,0 +1,259 @@
+$full: 100%;
+$primary: #4BCAFF;
+$darkGray: #414042;
+$gray: #838383;
+$lightGray: #717071;
+$panel: 0px 0px 12px 0px rgba(0, 0, 0, 0.12);
+$blackButton: 0px 6px 10px 0px rgba(49, 48, 50, 0.70);
+$lightButton: 0px 3px 10px 0px rgba(75, 202, 255, 0.70);
+$blackTransparent: rgba(0, 0, 0, 0.50);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.constraint {
+  width: 1180px;
+  padding: 0 0;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .constraint {
+    width: fit-content;
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 700px) {
+  .constraint {
+    width: fit-content;
+    padding: 0 8px;
+  }
+}
+
+
+.burger-menu-btn {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 18px;
+  width: 30px;
+
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transition: all 0.3s ease;
+  }
+}
+
+.burger-menu-btn.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu-btn.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu-btn.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@import "header";
+@media (max-width: 1200px) {
+  .header {
+    &__mobile {
+      display: block;
+    }
+
+    &__desktop {
+      display: none;
+    }
+  }
+}
+
+@import 'start';
+@media (max-width: 1200px) {
+  .start {
+    height: fit-content;
+  }
+}
+
+@import "feature";
+
+@import 'gallery';
+
+.video {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  background-image: url("img/video-bg-image.png");
+
+  &__button {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: 48px;
+    padding: 0 16px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    max-width: 700px;
+    font-size: 18px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    @media (min-width: 1024px) {
+      text-align: left;
+    }
+  }
+
+}
+
+.video-modal {
+  display: none;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 99999;
+  width: 100vw;
+  height: 100vh;
+  background-color: $blackTransparent;
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &__iframe {
+      height: 200px;
+
+      @media (min-width: 640px) {
+        width: 70vw;
+        height: 400px;
+      }
+
+      @media (min-width: 1280px) {
+        height: 50vh;
+        width: 50vw;
+      }
+    }
+  }
+}
+
+.video-modal.active {
+  display: block;
+}
+
+@import "contact";
+
+.footer {
+  background-color: $darkGray;
+  width: $full;
+  padding: 50px 0;
+
+  &__constraint{
+    font-size: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0;
+    }
+
+    color: $lightGray;
+  }
+}
+
+
+// swiper settings
+.swiper-button-prev:after, .swiper-button-next:after {
+  font-size: 16px !important;
+}
+
+.swiper-container {
+  height: $full !important;
+  overflow-x: hidden;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  width: 50px !important;
+  height: 50px !important;
+  background: rgba(28, 79, 100, 0.45);
+  border-radius: 100%;
+  color: white;
+}
+
+@media screen and (max-width: 1201px) {
+  .swiper-button-prev, .swiper-button-next {
+    display: none !important;
+  }
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  background: #4BCAFF;
+  opacity: 100%;
+  color: black;
+}
+
+.swiper-button-next {
+  right: 80px !important;
+}
+
+.swiper-button-prev {
+  left: 80px !important;
+}
+
+.swiper-pagination-bullets {
+  bottom: 8px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: transparent;
+  border: 1px solid white !important;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  border-color: #4BCAFF;
+  background: #4BCAFF;
+  opacity: 1;
+}

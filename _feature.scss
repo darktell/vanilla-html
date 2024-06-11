@@ -1,0 +1,98 @@
+.feature {
+  background-color: #f9f9f9;
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+
+
+  @media (min-width: 1280px) {
+    padding-top: 3.75rem;
+    padding-bottom: 5.625rem;
+  }
+
+  & .constraint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+      font-size: 36px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    &__subtitle {
+      padding-top: 4px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    &__content {
+      display: flex;
+      margin-top: 70px;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      overflow-x: auto;
+
+      @media (min-width: 1000px) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+      }
+
+
+
+      &__slide-wrapper {
+        @media (min-width: 640px) {
+          width: 50%;
+        }
+        @media (min-width: 768px) {
+          width: 220px;
+        }
+
+        &__main{
+          position: relative;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          & div{
+            border-radius: 9999px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $primary;
+            width: 160px;
+            height: 160px;
+            transition-duration: 150ms;
+          }
+          & p{
+            width: 100%;
+            text-align: center;
+            color: $gray;
+            font-weight: 500;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            transition-duration: 150ms;
+          }
+          & div.active{
+            background-color: $gray;
+
+          }
+          & p.active{
+            color: $primary;
+          }
+        }
+
+        &>p{
+          font-size: 13px;
+          color: $gray;
+          text-align: center;
+          padding: 24px;
+        }
+      }
+    }
+  }
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
