@@ -192,7 +192,7 @@ p {
 }
 @media (max-width: 640px) {
   .start .home-slide__content__buttons button {
-    width: 95%;
+    width: 100%;
   }
 }
 .start .home-slide__content__buttons__secondary {
