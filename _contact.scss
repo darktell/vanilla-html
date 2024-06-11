@@ -14,7 +14,7 @@
     }
 
     & > div {
-      background-color: rgba(75, 202, 255, 0.8); /* bg-primary/80 in Tailwind */
+      background-color: rgba(75, 202, 255, 0.8);
       border-radius: 0.375rem;
       width: 100%;
       box-shadow: $panel;
@@ -112,9 +112,8 @@
 
     @media (min-width: 640px) {
       height: 100%;
-      position: absolute; /* sm:absolute in Tailwind */
-      top: 0; /* sm:top-0 in Tailwind */
-
+      position: absolute;
+      top: 0;
     }
   }
 }
